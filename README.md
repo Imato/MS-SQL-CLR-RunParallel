@@ -11,21 +11,21 @@ Helpers for start same procedures in parallel
 
 #### Example
 
--- 1. Create list
-DECLARE @commands dbo.SqlProcedure,
+-- 1. Create list 
+DECLARE @commands dbo.SqlProcedure, 
 
-insert into @commands
-(SqlText)
-values
-('print ''Test 1''; waitfor delay ''00:00:02'';'),
-('waitfor delay ''00:00:02'';');
+insert into @commands 
+(SqlText) 
+values 
+('print ''Test 1''; waitfor delay ''00:00:02'';'), 
+('waitfor delay ''00:00:02'';'); 
 
 -- 2. Get parameter @sqlProcedures
-DECLARE  @sqlProcedures nvarchar(max);
-set @sqlProcedures = dbo.GetSqlProcedures(@commands);
+DECLARE  @sqlProcedures nvarchar(max); 
+set @sqlProcedures = dbo.GetSqlProcedures(@commands); 
 
--- 3. Execute
-EXEC dbo.RunParallel @sqlProcedures = @sqlProcedures
-    -- @noOutput = 0,
-    -- @maxThreads = 10
+-- 3. Execute 
+EXEC dbo.RunParallel @sqlProcedures = @sqlProcedures 
+    -- @noOutput = 0, 
+    -- @maxThreads = 10 
 ;
