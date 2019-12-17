@@ -1,0 +1,4 @@
+﻿CREATE ASSEMBLY [CLR.RunParallel]
+FROM 'PathToDll\CLR.RunParallel.dll'
+WITH PERMISSION_SET = UNSAFE;
+go
