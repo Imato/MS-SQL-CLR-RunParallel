@@ -10,7 +10,7 @@ Helpers for start same procedures in parallel
 6. Use it for start others procedures in parallel
 
 #### Example
-
+```
 -- 1. Create list 
 DECLARE @commands dbo.SqlProcedure, 
 
@@ -27,5 +27,6 @@ set @sqlProcedures = dbo.GetSqlProcedures(@commands);
 -- 3. Execute 
 EXEC dbo.RunParallel @sqlProcedures = @sqlProcedures 
     -- @noOutput = 0, 
-    -- @maxThreads = 10 
+    -- @maxThreads = 10
 ;
+```
