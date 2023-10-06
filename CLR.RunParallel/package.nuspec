@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package>
+	<metadata>
+		<id>Imato.CLR.ParallelRunner</id>
+		<version>1.0.1</version>
+		<authors>Alexey Varentsov (@imato)</authors>
+		<owners>Alexey Varentsov (@imato)</owners>
+		<license type="expression">MIT</license>
+		<projectUrl>https://github.com/Imato/MS-SQL-CLR-RunParallel</projectUrl>
+		<icon>.\icon.png</icon>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>Run MS SQL procedures in parallel process</description>
+		<releaseNotes></releaseNotes>
+		<copyright>imato 2022</copyright>
+		<tags>MSSQL CLR Parallel</tags>
+	</metadata>
+	<files>
+		<file src="icon.png" target="\" />
+	</files>
+</package>

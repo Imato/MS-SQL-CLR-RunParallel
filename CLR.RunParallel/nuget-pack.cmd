@@ -1,0 +1,1 @@
+nuget pack CLR.RunParallel.csproj -Build -Symbols -Properties Configuration=Release

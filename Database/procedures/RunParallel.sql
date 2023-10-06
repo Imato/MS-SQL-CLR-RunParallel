@@ -1,7 +1,7 @@
 ﻿CREATE PROCEDURE dbo.RunParallel
   @sqlProcedures NVARCHAR(MAX),     -- List of procedures
   @noOutput      BIT            = 0, -- don't return result of execution,
-  @maxThreads    INT            = 5
+  @maxThreads    INT            = 10
 /*
 
   Input: XML structure with type dbo.SqlProcedure (Id, SqlText, IsSuccess, ErrorText)
@@ -28,4 +28,4 @@
   EXEC dbo.RunParallel @sqlProcedures = @sqlProcedures;
 
 */
-AS EXTERNAL NAME [CLR.RunParallel].[RunParallelProcedure].[RunParallel];
+AS EXTERNAL NAME [Imato.CLR.ParallelRunner].[RunParallelProcedure].[RunParallel];

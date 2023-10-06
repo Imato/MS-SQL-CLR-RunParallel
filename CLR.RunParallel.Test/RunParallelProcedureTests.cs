@@ -1,7 +1,6 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace CLR.RunParallel.Test
+namespace Imato.CLR.ParallelRunner.Test
 {
     [TestClass]
     public class RunParallelProcedureTests : RunParallelProcedure
@@ -27,7 +26,7 @@ namespace CLR.RunParallel.Test
             var resutl = ParseXmlParameter(xml);
             Assert.AreEqual(3, resutl.Count);
             Assert.AreEqual(2, resutl[1].Id);
-            Assert.AreEqual("waitfor delay '00:00:02';", resutl[1].SqlText);
+            Assert.AreEqual("waitfor delay '00:00:02';", resutl[1].Text);
         }
     }
 }
